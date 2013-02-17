@@ -18,3 +18,10 @@ That's why the CSS styles all have .codehilite in front of them. You should chan
 
 .. _Pygments: http://pygments.org
 .. _styles: http://dev.pocoo.org/projects/pygments/browser/pygments/styles
+
+Theme previews
+--------------
+
+To preview the various themes, check out http://igniteflow.com/pygments/themes/ from igniteflow_.
+
+.. _igniteflow: https://github.com/igniteflow
