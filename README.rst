@@ -22,6 +22,4 @@ That's why the CSS styles all have .codehilite in front of them. You should chan
 Theme previews
 --------------
 
-To preview the various themes, check out http://igniteflow.com/pygments/themes/ from igniteflow_.
-
-.. _igniteflow: https://github.com/igniteflow
+To preview the various themes, check out http://richleland.github.io/pygments-css/.
