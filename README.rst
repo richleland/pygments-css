@@ -6,7 +6,7 @@ Pygments_, a Python-based code highlighting tool, comes with a set of builtin st
 Pretty simple stuff here. These css files were generated using pygmentize
 on the command line like so::
 
-    pygmentize -S default -f html > default.css
+    pygmentize -S default -f html -a .highlight > default.css
 
 I'm using a combination of Pygments and Markdown on a django project that has a model with the following save method::
 
