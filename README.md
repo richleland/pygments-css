@@ -11,7 +11,9 @@ build
 
 These css files were generated using pygmentize on the command line like so::
 
-    pygmentize -S default -f html > default.css
+    pygmentize -S default -f html -a .highlight > default.css
+
+You can remove or change the top-level class by removing or modifying `-a .highlight` in the `makefile`.
 
 To regenerate them all with whichever ``pygments`` version you are using, run
 
