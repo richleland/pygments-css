@@ -30,35 +30,32 @@
         <a name="pygments-css" class="anchor" href="#pygments-css"><span class="octicon octicon-link"></span></a>pygments-css
       </h1>
 
-      <p><a href="http://pygments.org">Pygments</a>, a Python-based code highlighting tool, comes with a set of builtin <a href="http://dev.pocoo.org/projects/pygments/browser/pygments/styles">styles</a> (not css files) for code highlighting. You have to generate a CSS file using the command line. I just figured I'd save someone this work in the future and generate all the CSS files based on the Pygments builtins.</p>
+      <p><a href="http://pygments.org">Pygments</a>, a Python-based code highlighting tool, comes with a set of builtin <a href="http://dev.pocoo.org/projects/pygments/browser/pygments/styles">styles</a> (not css files) for code highlighting. You have to generate a CSS file using the command line. You can generate these yourself, but this git repository has already generated them for you.</p>
 
-      <p>Pretty simple stuff here. These css files were generated using pygmentize
-      on the command line like so::</p>
+      <p>These css files were generated using pygmentize on the command line like so:</p>
 
-      <pre><code>pygmentize -S default -f html &gt; default.css
-      </code></pre>
+      <pre><code>pygmentize -S default -f html -a .highlight > default.css</code></pre>
 
-      <p>I'm using a combination of Pygments and Markdown on a django project that has a model with the following save method::</p>
+      <p>You can remove or change the top-level class by removing or modifying -a .highlight in the makefile.</p>
 
-      <pre><code>def save(self):
-      self.html = markdown(self.body, 'codehilite')
-      super(Entry, self).save()
-      </code></pre>
+      <p>To regenerate them all with whichever pygments version you are using, run:</p>
 
-      <p>That's why the CSS styles all have .codehilite in front of them. You should change the .codehilite to work with the style name that you use for your Pygments HTML output.</p>
+      <pre><code>git clone <this repo>
+cd pygments-css
+make cssfiles</pre></code>
 
       <h2>Themes</h2>
       <h3>autumn.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/Ea46N/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/Ea46N/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>borland.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/GZ5cn/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/GZ5cn/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>bw.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/yYJ7z/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/yYJ7z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>colorful.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/9nUft/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/9nUft/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>default.css</h3>
       <iframe width="100%" height="300" src="//jsfiddle.net/richleland/LjLx2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
@@ -70,43 +67,37 @@
       <iframe width="100%" height="300" src="//jsfiddle.net/richleland/UPy3h/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>fruity.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/6SWUA/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-      <h3>github.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/4QEEg/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/6SWUA/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>manni.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/D3npA/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/D3npA/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>monokai.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/8yLP6/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/8yLP6/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>murphy.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/h562V/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/h562V/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>native.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/8uMVB/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/8uMVB/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>pastie.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/wy5Ha/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/wy5Ha/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>perldoc.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/Ptu4t/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/Ptu4t/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>tango.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/rPKAL/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/rPKAL/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>trac.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/uaR6P/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/uaR6P/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>vim.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/7d6j5/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/7d6j5/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
       <h3>vs.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/eLzdu/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-      <h3>zenburn.css</h3>
-      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/4ypUr/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      <iframe width="100%" height="300" src="//jsfiddle.net/richleland/eLzdu/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
     </section>
     <footer>
