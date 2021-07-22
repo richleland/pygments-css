@@ -5,8 +5,11 @@
 # (pygmentize documentation is pretty scattered and confusing, but the "-a" will add other classes
 # to the output)
 
-
-STYLES = autumn
+STYLES = abap
+STYLES += algol
+STYLES += algol_nu
+STYLES += arduino
+STYLES += autumn
 STYLES += borland
 STYLES += bw
 STYLES += colorful
@@ -14,16 +17,34 @@ STYLES += default
 STYLES += emacs
 STYLES += friendly
 STYLES += fruity
+STYLES += gruvbox-dark
+STYLES += gruvbox-light
+STYLES += igor
+STYLES += inkpot
+STYLES += lovelace
 STYLES += manni
+STYLES += material
 STYLES += monokai
 STYLES += murphy
 STYLES += native
+STYLES += paraiso-dark
+STYLES += paraiso-light
 STYLES += pastie
 STYLES += perldoc
+STYLES += rainbow_dash
+STYLES += rrt
+STYLES += sas
+STYLES += solarized-dark
+STYLES += solarized-light
+STYLES += stata
+STYLES += stata-dark
+STYLES += stata-light
 STYLES += tango
 STYLES += trac
 STYLES += vim
 STYLES += vs
+STYLES += xcode
+STYLES += zenburn
 
 # a recursively-expanding variable, so that its value contains an actual function call to be
 # re-expanded under the control of foreach
